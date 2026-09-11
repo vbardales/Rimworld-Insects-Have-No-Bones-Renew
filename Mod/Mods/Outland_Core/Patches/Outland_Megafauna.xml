@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Megafauna's three arthropods. They descend from AnimalThingBase, not from BaseInsect,
+	     so nothing else reaches them.
+
+	     Guarded on one of the three defs rather than on the mod's display name:
+	     PatchOperationFindMod compares ModMetaData.Name, which belongs to the upstream author
+	     and changes the day a mod is renamed or continued. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="Arthropleura"]</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>
+				/Defs/ThingDef[
+				   defName="Arthropleura"
+				or defName="Meganeura"
+				or defName="Pulmonoscorpius"
+				]/statBases
+			</xpath>
+			<value>
+				<Outland_BoneAmount>0</Outland_BoneAmount>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

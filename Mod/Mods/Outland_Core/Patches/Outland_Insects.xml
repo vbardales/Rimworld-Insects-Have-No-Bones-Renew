@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Every insect in the base game, and every modded animal that inherits from BaseInsect.
+	     No guard needed: BaseInsect is a Core def and this folder only loads with Outland Core
+	     active.
+
+	     Outland Core does nothing insect-specific of its own. Outland_BoneAmount has a
+	     defaultBaseValue of 35 and a StatPart_BodySize, so without this a megaspider butchers
+	     into a pile of bone. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="BaseInsect"]/statBases</xpath>
+		<value>
+			<Outland_BoneAmount>0</Outland_BoneAmount>
+		</value>
+	</Operation>
+
+</Patch>

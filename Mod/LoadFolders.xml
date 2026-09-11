@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+
+	<!-- Filename spelled LoadFolders.xml, with the S. RimWorld only ever looks for that name,
+	     and on a case-sensitive filesystem — a Steam Deck, any Linux box — a file called
+	     loadFolders.xml is simply not found and every folder below is ignored.
+
+	     Once a version block matches, ModContentPack.InitLoadFolders adds these folders and
+	     returns: the mod root and a Common/ folder are NOT added on top. Everything this mod
+	     ships has to be listed here or it never loads. -->
+
+	<v1.6>
+		<li>/</li>
+		<li IfModActive="DankPyon.Medieval.Overhaul">Mods/MedievalOverhaul</li>
+		<li IfModActive="Neronix17.Outland.Core">Mods/Outland_Core</li>
+	</v1.6>
+
+</loadFolders>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Every insect in the base game, and every modded animal that inherits from BaseInsect.
+	     No guard needed: BaseInsect is a Core def and this folder only loads with Medieval
+	     Overhaul active.
+
+	     Medieval Overhaul 1.6 already gives an Insectoid-fleshed animal neither bone nor fat
+	     on its own. What this operation still does is hand the fat back, which is the whole
+	     point of naming it: bones no, fat yes. -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/ThingDef[@Name="BaseInsect"]</xpath>
+		<value>
+			<li Class="MedievalOverhaul.ButcherProperties">
+				<hasBone>false</hasBone>
+				<hasFat>true</hasFat>
+			</li>
+		</value>
+	</Operation>
+
+</Patch>
