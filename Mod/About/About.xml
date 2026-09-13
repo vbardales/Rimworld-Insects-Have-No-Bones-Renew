@@ -39,11 +39,13 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 AI-GENERATED
 
-This port was done with Claude Code (Anthropic) under human direction, review and testing. Stated openly: working with these tools is my job.
+This port was done with Claude Code (Anthropic) under human direction and review. Stated openly: working with these tools is my job. The preview illustration was generated with OpenAI image generation and composed with a text overlay. Automated validation is documented in the repository; final in-game validation is pending.
 
 THANKS
 
-SirMashedPotato, who wrote the original, and Hiroyan, who wrote the Alpha Animals lists. SirLalaPyon for Medieval Overhaul, Neronix17 for Outland Core, Sarg Bjornson and the Alpha team for Alpha Animals, Spino for Megafauna, the Rim of Madness team for Rim of Madness - Bones and Sihv for keeping it alive.</description>
+SirMashedPotato, who wrote the original, and Hiroyan, who wrote the Alpha Animals lists. SirLalaPyon for Medieval Overhaul, Neronix17 for Outland Core, Sarg Bjornson and the Alpha team for Alpha Animals, Spino for Megafauna, the Rim of Madness team for Rim of Madness - Bones and Sihv for keeping it alive.
+
+[url=https://github.com/vbardales/Rimworld-Insects-Have-No-Bones-Renew]Source code on GitHub[/url]</description>
   <loadAfter>
     <li>Ludeon.RimWorld</li>
     <li>DankPyon.Medieval.Overhaul</li>

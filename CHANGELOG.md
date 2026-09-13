@@ -4,6 +4,11 @@ All notable changes to this mod are documented here.
 
 ## [Unreleased]
 
+- Add the 128px mod icon and 896x504 Workshop preview, preserving source artwork,
+  prompts and reproducible preview composition.
+- Add native XML patch-loader tests, passing results and final in-game scenarios.
+  In-game validation remains pending.
+- Add the final source repository link and accurate artwork attribution to About.
 - Establish the standalone repository while preserving the existing public history.
 - Correct the rights documentation to cite the original author's explicit reuse
   permission; preserve the limited MIT scope, credits and removal commitment.
