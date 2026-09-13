@@ -1,0 +1,26 @@
+PASS: 8 XML documents and 11 XPath expressions parse.
+PASS: combination 0, MO_AlphaAnimals.xml, matches 0,0,0
+PASS: combination 0, MO_Insects.xml, matches 1
+PASS: combination 0, MO_Megafauna.xml, matches 0,0
+PASS: combination 0, Outland_AlphaAnimals.xml, matches 0,0
+PASS: combination 0, Outland_Insects.xml, matches 1
+PASS: combination 0, Outland_Megafauna.xml, matches 0,0
+PASS: combination 1, MO_AlphaAnimals.xml, matches 1,61,16
+PASS: combination 1, MO_Insects.xml, matches 1
+PASS: combination 1, MO_Megafauna.xml, matches 0,0
+PASS: combination 1, Outland_AlphaAnimals.xml, matches 1,77
+PASS: combination 1, Outland_Insects.xml, matches 1
+PASS: combination 1, Outland_Megafauna.xml, matches 0,0
+PASS: combination 2, MO_AlphaAnimals.xml, matches 0,0,0
+PASS: combination 2, MO_Insects.xml, matches 1
+PASS: combination 2, MO_Megafauna.xml, matches 1,3
+PASS: combination 2, Outland_AlphaAnimals.xml, matches 0,0
+PASS: combination 2, Outland_Insects.xml, matches 1
+PASS: combination 2, Outland_Megafauna.xml, matches 1,3
+PASS: combination 3, MO_AlphaAnimals.xml, matches 1,61,16
+PASS: combination 3, MO_Insects.xml, matches 1
+PASS: combination 3, MO_Megafauna.xml, matches 1,3
+PASS: combination 3, Outland_AlphaAnimals.xml, matches 1,77
+PASS: combination 3, Outland_Insects.xml, matches 1
+PASS: combination 3, Outland_Megafauna.xml, matches 1,3
+Scope: actual pre-inheritance XML selectors only; no RimWorld patch engine or butchering simulation.

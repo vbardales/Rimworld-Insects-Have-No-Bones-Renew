@@ -3,29 +3,24 @@
 A 1.6 port of **Insects don't have bones**, by **SirMashedPotato** and **Hiroyan**
 ([2041677515](https://steamcommunity.com/sharedfiles/filedetails/?id=2041677515)).
 
-## Status: public
+## Status: public; explicit upstream permission
 
-The source mod is **dead** — `<supportedVersions>` lists 1.3, 1.4 and 1.5 and stops there — and
-**no licence is declared anywhere**, checked at the four places one could be:
+The original author's [Steam description](https://steamcommunity.com/sharedfiles/filedetails/?id=2041677515)
+states: "Contents of this mod are free to use in other mods." The author also confirms
+reuse in a November 21, 2024 comment. This permission was checked on 2026-09-13;
+the web provider supplied a snapshot labelled as crawled eight months earlier.
 
-1. no `LICENSE` or `COPYING` file in the mod folder (all fifteen files were listed);
-2. no mention in `About/About.xml`, whose `<description>` is four sentences about what the mod
-   patches;
-3. no linked repository — `<url>` is absent entirely;
-4. nothing in the body of the description on its Steam page.
+The workflow classification is `open`, based on this explicit permission, rather
+than `silent`. The installed source declares RimWorld 1.3, 1.4 and 1.5. The absence
+of a standalone licence file does not erase the permission on the author's page.
+This supersedes the earlier review that incorrectly reported no permission there.
 
-That fourth check is the one that matters, and it is checked for a **refusal**, not for a
-permission: a ban on redistribution never presents itself as a licence, and searching for words
-like *licence* or *allow* can only ever find permission. See たたら製鉄, where the ban was a
-sentence in the description and nowhere else, and みるく！, where the page says
-"Prohibit redistribution." and the other three places are empty.
+MIT covers only this port's own contributions, as scoped in LICENSE. The original
+material remains credited to SirMashedPotato and Hiroyan and is reused under the
+statement above; it is not relicensed as MIT. The existing removal-on-request
+commitment in LICENSE is retained. The author field preserves both original authors.
 
-Dead plus silent is publishable, under the usual convention for ports on the RimWorld Workshop:
-republished with **credit by name** and **removal on request, without argument**. The `<author>`
-field reads `SirMashedPotato, Hiroyan - 1.6 port: nelim`, and the removal clause is in the
-description.
-
-The mod ships no assemblies and no code, so nothing here was decompiled from it.
+The original mod ships no assemblies, so nothing here was decompiled from it.
 
 ## What was carried over
 

@@ -195,4 +195,6 @@ Not yet done: **testing in game.** That is nelim's, on her own machine.
   the Alpha team for Alpha Animals, **Spino** for Megafauna, the **Rim of Madness team** for Rim
   of Madness - Bones and **Sihv** for keeping it alive.
 
-See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence position and what was taken.
+The original author explicitly permits reuse on the linked Steam page. MIT covers only
+the port contributions described in LICENSE. See [ATTRIBUTION.md](ATTRIBUTION.md) for
+the permission statement, credits and removal-on-request commitment.

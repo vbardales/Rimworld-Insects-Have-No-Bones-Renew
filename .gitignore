@@ -1,0 +1,13 @@
+.claude/
+.codex/
+.agents/
+.build/
+Source/obj/
+Source/bin/
+.vs/
+.idea/
+*.user
+
+# Local workflow evidence; not part of the public repository.
+/STATUS.md
+/Tests/Audit-artifacts.json

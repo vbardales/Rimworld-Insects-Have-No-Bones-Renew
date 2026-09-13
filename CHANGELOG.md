@@ -2,6 +2,14 @@
 
 All notable changes to this mod are documented here.
 
+## [Unreleased]
+
+- Establish the standalone repository while preserving the existing public history.
+- Correct the rights documentation to cite the original author's explicit reuse
+  permission; preserve the limited MIT scope, credits and removal commitment.
+- Record the workflow audit and add reproducible XML selector checks. No gameplay
+  behavior or patch payload changed.
+
 ## [1.0.0] — 2026-09-05
 
 First release. Port of SirMashedPotato and Hiroyan's **Insects don't have bones** to RimWorld 1.6.
