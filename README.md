@@ -185,7 +185,7 @@ Everything below was checked against the files actually installed, not against m
   targets were checked to have their own. So does Core's `BaseInsect`.
 - `Outland_BoneAmount` confirmed present in Outland Core 1.6 (`1.6/Defs/StatDefs/Stats_Bones.xml`).
 
-Not yet done: **testing in game.** That is nelim's, on her own machine.
+Not yet done: **testing in game.** That is Nelim's, on her own machine.
 
 ## Credits
 

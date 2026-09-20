@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Insects don't have bones 1.6</name>
-  <author>SirMashedPotato, Hiroyan - 1.6 port: nelim</author>
+  <author>SirMashedPotato, Hiroyan - 1.6 adapted by Nelim</author>
   <packageId>nelim.insectshavenobones</packageId>
   <supportedVersions>
     <li>1.6</li>
