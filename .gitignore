@@ -11,3 +11,23 @@ Source/bin/
 # Local workflow evidence; not part of the public repository.
 /STATUS.md
 /Tests/Audit-artifacts.json
+
+# System
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Windows folder icons: Art/ModIcon.ico and Art/Preview.ico are local Explorer conveniences, and
+# Steam uploads Mod/ exactly as it stands, so neither an .ico nor a desktop.ini may ever be tracked.
+*.ico
+
+# Compiled DirectDraw textures. Never tracked here: a .dds is a build product of a PNG source,
+# and it is large. If one ever appears (game caches, tool output), it stays on disk.
+*.dds
+
+# Pickle run evidence (captures, films, reports, logs) stays on disk and out of git: it can reach
+# gigabytes and the disk is short. What is committed is one text line per run in docs/runs/.
+# Which files to keep after a run is in TESTING.md, "Evidence to keep".
+/Tests/Pickle/Evidence/
+/Tests/Pickle/runs/
+/evidence/

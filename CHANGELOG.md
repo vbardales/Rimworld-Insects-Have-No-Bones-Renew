@@ -4,20 +4,36 @@ All notable changes to this mod are documented here.
 
 ## [Unreleased]
 
-- Add the 128px mod icon and 896x504 Workshop preview, preserving source artwork,
-  prompts and reproducible preview composition.
-- Add native XML patch-loader tests, passing results and final in-game scenarios.
-  In-game validation remains pending.
-- Add the final source repository link and accurate artwork attribution to About.
-- Establish the standalone repository while preserving the existing public history.
-- Correct the rights documentation to cite the original author's explicit reuse
-  permission; preserve the limited MIT scope, credits and removal commitment.
-- Record the workflow audit and add reproducible XML selector checks. No gameplay
-  behavior or patch payload changed.
+The version that arrives with `published` is `1.0.0`. Until then nothing here has reached the Workshop item.
 
-## [1.0.0] — 2026-09-05
+- Add `TESTING.md`, the pass plan of the future Pickle suite: which passes, what each one covers, what
+  the automated tests already establish, and which evidence to keep after a run.
+- Add `BACKLOG.md`, the mod's own list of what remains, and `docs/PROTOCOLS-READ.md`, the workflow
+  documents read and the version of each.
+- Record in `ATTRIBUTION.md` that the original mod has no public source repository, so there is nothing
+  to fork or to send a pull request to.
+- Ignore Windows folder icons, `desktop.ini`, DirectDraw textures and Pickle run evidence.
 
-First release. Port of SirMashedPotato and Hiroyan's **Insects don't have bones** to RimWorld 1.6.
+
+## [0.1.0] — 2026-09-23
+
+Creation of the `publishIdFile`: the first upload, whose only purpose was to create the Workshop item
+(private, as Steam creates every item) and obtain its `About/PublishedFileId.txt`. Nothing in this entry
+says the mod is public or tested in game. `Mod/` is the tree at commit `e8487e7`, and nothing in it
+changed between that commit and the upload.
+
+### Added
+
+- The 128 px mod icon and the 896x504 Workshop preview, with the source artwork, the prompt and the
+  reproducible composition of the preview kept under `Art/` and `Assets/`.
+- Native XML patch-loader tests (`Tests/Audit-PatchEngine.ps1`, 16 combinations, 48 top-level `Apply`
+  calls on the installed game) and selector tests (`Tests/Audit-Xml.ps1`, 24 checks), with their results.
+- `TEST_SCENARIOS.md`: the final in-game scenarios, written and not yet played.
+- The final source repository link and the artwork attribution in the About description.
+- `LICENSE` and `ATTRIBUTION.md` corrected to cite the original author's explicit reuse permission
+  ("Contents of this mod are free to use in other mods"), keeping the credits, the removal commitment and
+  the limited MIT scope.
+- The standalone repository, preserving the history already published.
 
 ### Fixed
 

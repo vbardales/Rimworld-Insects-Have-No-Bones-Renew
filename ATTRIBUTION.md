@@ -22,6 +22,15 @@ commitment in LICENSE is retained. The author field preserves both original auth
 
 The original mod ships no assemblies, so nothing here was decompiled from it.
 
+## Upstream repository
+
+The original has no public source repository. Its `About.xml` carries no `<url>`, and the
+author's GitHub account holds none for this mod, checked on 2026-09-28 against the account's whole
+repository list. The only related repository there is `Insects-Have-Chitin`, a separate companion
+mod that was not read for this port. So there is nothing to fork and no repository to send a pull
+request to. The provenance used is the Workshop copy of the original, read from the Workshop folder.
+If the author ever publishes a repository, the fixes described below should be offered there first.
+
 ## What was carried over
 
 Everything that makes the mod what it is:
