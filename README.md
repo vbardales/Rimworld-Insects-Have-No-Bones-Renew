@@ -1,4 +1,4 @@
-# Insects don't have bones 1.6
+# Insects don't have bones Renew
 
 Port of **SirMashedPotato and Hiroyan's Insects don't have bones** to RimWorld 1.6.
 

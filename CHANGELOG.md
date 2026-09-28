@@ -13,6 +13,8 @@ The version that arrives with `published` is `1.0.0`. Until then nothing here ha
 - Record in `ATTRIBUTION.md` that the original mod has no public source repository, so there is nothing
   to fork or to send a pull request to.
 - Ignore Windows folder icons, `desktop.ini`, DirectDraw textures and Pickle run evidence.
+- Rename the mod to *Insects don't have bones Renew*: the display name, the README title and the title on the
+  Workshop preview now end in `Renew` instead of `1.6`. The `packageId` is unchanged.
 
 
 ## [0.1.0] — 2026-09-23

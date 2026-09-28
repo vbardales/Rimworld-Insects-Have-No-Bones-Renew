@@ -18,12 +18,6 @@ first release could still have) and `unverified` (something that could not be ch
 
 ## Defects
 
-- **Name.** `<name>` in `About.xml` and the title of `README.md` still end in ` 1.6`. The convention
-  since 2026-09-11 is ` Renew`, which replaces that suffix. Changing the name means re-engraving the title
-  on `Art/Preview.png`, so it is the owner's call.
-- **The GitHub repository description is out of date.** It says the port is "published without the
-  original author's explicit consent", but the author's page states the reuse permission. It is a public
-  setting, so it waits for the owner.
 - **The About description** has no line pointing to `ATTRIBUTION.md` and the licence, and the mods it names
   (Medieval Overhaul, Outland Core, Alpha Animals, Megafauna, Rim of Madness - Bones Unofficial Fix) carry
   no Workshop link. It was sent as it stood when the item was created; from now on the page description
