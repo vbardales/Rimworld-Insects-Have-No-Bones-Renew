@@ -1,6 +1,9 @@
 # Pass "both": Medieval Overhaul and Outland Core together, with Alpha Animals and Megafauna. It proves that
-# neither integration restores a bone the other patch removed. Same notes as wsl-deps.mo.map.
+# neither integration restores a bone the other patch removed. Dependencies as in wsl-deps.mo.map and
+# wsl-deps.outland.map, each before the mod that needs it.
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+syrchalis.processor.framework 3210544395
+neronix17.toolbox 1660622094
 sarg.alphaanimals 1541721856
 Spino.Megafauna 1055485938
 DankPyon.Medieval.Overhaul 3219596926

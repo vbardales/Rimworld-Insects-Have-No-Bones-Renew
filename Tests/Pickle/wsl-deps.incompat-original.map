@@ -7,6 +7,9 @@
 # line, so a green run says the incompatibility is still worth declaring. It goes red the day the original is
 # updated, which is the day the declaration can be reconsidered.
 #
-# The item is not in the WSL install's cache: downloading it goes through Use-Wsl.ps1 (PickleTools/Headless/README.md).
+# Medieval Overhaul comes from the WSL cache (downloaded 2026-09-28) and needs Harmony, Vanilla Expanded Framework and
+# [SYR] Processor Framework, named below before it. The original is in the Windows Workshop folder.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+syrchalis.processor.framework 3210544395
 DankPyon.Medieval.Overhaul 3219596926
 SirMashedPotato.InsectsHaveNoBones 2041677515

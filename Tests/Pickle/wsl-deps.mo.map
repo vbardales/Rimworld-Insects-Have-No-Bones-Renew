@@ -1,13 +1,14 @@
 # Pass "mo": Medieval Overhaul, Alpha Animals and Megafauna beside the mod.
 #
-# Overlay entries are staged in the order written, and the mod under test comes after them, which is the order
-# its loadAfter asks for. Alpha Animals needs Vanilla Expanded Framework (its About names it as a hard
-# dependency); Medieval Overhaul's own hard dependencies were not read, because its Workshop folder was absent
-# when this map was written: if the staging stops on "no Workshop id known for ...", name that dependency here.
-#
-# None of these four Workshop items is in the WSL install's cache. Downloading them is work on the machine and
-# goes through Use-Wsl.ps1, like any other (PickleTools/Headless/README.md).
+# Overlay entries are staged in the order written, dependencies before their consumers, and the mod under test
+# comes after them, which is the order its loadAfter asks for. Read from the About.xml of each on 2026-09-28:
+#   Alpha Animals      needs Harmony and Vanilla Expanded Framework
+#   Medieval Overhaul  needs Harmony, Vanilla Expanded Framework and [SYR] Processor Framework
+#   Megafauna          needs nothing
+# Harmony is part of the base staging. Medieval Overhaul is not in the Windows Workshop folder: the staging finds it
+# in the WSL cache, where it was downloaded through Use-Wsl.ps1 on 2026-09-28.
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+syrchalis.processor.framework 3210544395
 sarg.alphaanimals 1541721856
 Spino.Megafauna 1055485938
 DankPyon.Medieval.Overhaul 3219596926

@@ -71,16 +71,15 @@ have run in a pass that gives it its condition. `07` is skipped in every pass bu
 
 ## Before the first run, and what nobody has checked
 
-Written on 2026-09-28, when the Workshop folders of Medieval Overhaul and Outland Core were absent from disk, so
-nothing about them could be read. Every line below is open until a run settles it.
+Written on 2026-09-28. Every line below is open until a run settles it.
 
-- **None of the four dependency mods, nor the original, is in the WSL install's cache.** Downloading them is work
-  on the machine and goes through `Use-Wsl.ps1`, not through the request.
-- **The hard dependencies of Medieval Overhaul and Outland Core are not named in their maps.** Alpha Animals'
-  (Vanilla Expanded Framework) is. If the staging stops on `no Workshop id known for ...`, name the missing one.
+- **Medieval Overhaul and Outland Core came from the WSL cache**, downloaded through `Use-Wsl.ps1` on 2026-09-28: the
+  Windows Workshop folder no longer holds them. Their hard dependencies were read from their About.xml on that day
+  and are in the maps (Vanilla Expanded Framework, [SYR] Processor Framework, Tabula Rasa); if a dependency of theirs
+  changes, the staging stops on `no Workshop id known for ...`.
 - **Outland Core's bone is recognised by a name.** A product whose `defName` contains "Bone". If it is named
   otherwise, `06-controls` goes red first. Medieval Overhaul's `DankPyon_Bone` and `DankPyon_Fat` come from its
-  decompiled `DefOf` class.
+  decompiled `DefOf` class (1.6 assembly, read on 2026-09-05).
 - **The animal is butchered alive and unspawned**, not as a corpse, by a call to `Pawn.ButcherProducts`. Medieval
   Overhaul's consumer was read as a postfix on that method; Outland Core's was read only as far as its stat check.
   Whether both act on an unspawned live pawn was not observed.

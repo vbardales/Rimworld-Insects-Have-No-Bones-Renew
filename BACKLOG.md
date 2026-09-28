@@ -12,10 +12,6 @@ first release could still have) and `unverified` (something that could not be ch
   dependencies of Medieval Overhaul and Outland Core, Outland Core's bone name, and butchering a live unspawned
   pawn. The 16 combinations of `TEST_SCENARIOS.md`, the existing-save add/remove and a log read have never been
   played in a game.
-- **`Tests/Audit-PatchEngine.ps1` could not be replayed on 2026-09-28**: the Medieval Overhaul and Outland
-  Core Workshop folders were no longer on disk. Its 2026-09-13 results still stand for the six patch
-  files and `LoadFolders.xml`, whose SHA-256 are unchanged; only `About.xml` changed since (metadata).
-  `Tests/Audit-Xml.ps1` was replayed the same day and passed.
 
 ## Defects
 

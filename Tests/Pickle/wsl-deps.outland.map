@@ -1,7 +1,9 @@
 # Pass "outland": Outland Core, Alpha Animals and Megafauna beside the mod, Medieval Overhaul left out.
-# Outland Core's own hard dependencies were not read (its Workshop folder was absent when this was written):
-# name any the staging asks for here. Same download note as wsl-deps.mo.map.
+# Read from the About.xml of each on 2026-09-28: Outland Core needs Vanilla Expanded Framework and Tabula Rasa
+# (neronix17.toolbox); Alpha Animals needs Vanilla Expanded Framework; Megafauna needs nothing. Outland Core is not
+# in the Windows Workshop folder: the staging finds it in the WSL cache, downloaded through Use-Wsl.ps1 on 2026-09-28.
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+neronix17.toolbox 1660622094
 sarg.alphaanimals 1541721856
 Spino.Megafauna 1055485938
 Neronix17.Outland.Core 2755501685
