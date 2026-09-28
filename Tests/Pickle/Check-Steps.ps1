@@ -58,7 +58,7 @@ function Read-Patterns($dir, $source) {
     foreach ($f in Get-ChildItem -LiteralPath $dir -Filter *.cs -ErrorAction SilentlyContinue) {
         $text = [IO.File]::ReadAllText($f.FullName)
         foreach ($m in [regex]::Matches($text, $attr)) {
-            [pscustomobject]@{ Source = $source; File = $f.Name; Pattern = ($m.Groups[1].Value -replace '\\\\', '\' -replace '\\"', '"') }
+            [pscustomobject]@{ Source = $source; File = $f.Name; Pattern = ($m.Groups[1].Value -replace '\\(.)', '$1') }
         }
     }
 }
@@ -111,6 +111,7 @@ foreach ($p in 'the save {string} is loaded', 'I save and reload', 'I save and r
 $staged = @()
 foreach ($map in Get-ChildItem -LiteralPath $suite -Filter 'wsl-deps*.map') {
     foreach ($line in [IO.File]::ReadAllLines($map.FullName)) {
+        if ($line -match '^\s*!' ) { continue }
         if ($line -match '^\s*(\S+)\s+path:PickleTools/([^/\s]+)/') { $staged += $Matches[2] }
     }
 }
