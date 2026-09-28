@@ -1,0 +1,8 @@
+# Pass "outland": Outland Core, Alpha Animals and Megafauna beside the mod, Medieval Overhaul left out.
+# Outland Core's own hard dependencies were not read (its Workshop folder was absent when this was written):
+# name any the staging asks for here. Same download note as wsl-deps.mo.map.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+sarg.alphaanimals 1541721856
+Spino.Megafauna 1055485938
+Neronix17.Outland.Core 2755501685
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod

@@ -1,0 +1,8 @@
+# Pass "both": Medieval Overhaul and Outland Core together, with Alpha Animals and Megafauna. It proves that
+# neither integration restores a bone the other patch removed. Same notes as wsl-deps.mo.map.
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+sarg.alphaanimals 1541721856
+Spino.Megafauna 1055485938
+DankPyon.Medieval.Overhaul 3219596926
+Neronix17.Outland.Core 2755501685
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod

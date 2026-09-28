@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Insects don't have bones Renew - Pickle tests</name>
+  <author>Nelim</author>
+  <packageId>nelim.insectshavenobones.pickletests</packageId>
+  <supportedVersions><li>1.6</li></supportedVersions>
+  <description>In-game validation scenarios for Insects don't have bones Renew. Development only; never published.</description>
+  <modDependencies>
+    <li><packageId>nelim.insectshavenobones</packageId><displayName>Insects don't have bones Renew</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3806768044</steamWorkshopUrl></li>
+    <li><packageId>rimworks.pickle</packageId><displayName>Pickle</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl></li>
+  </modDependencies>
+  <loadAfter><li>nelim.insectshavenobones</li><li>rimworks.pickle</li></loadAfter>
+</ModMetaData>

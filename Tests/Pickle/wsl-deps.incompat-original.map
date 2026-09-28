@@ -1,0 +1,12 @@
+# Pass "incompat-original": the original mod, which this one declares itself incompatible with, beside it and
+# beside Medieval Overhaul (the original's Medieval Overhaul folder is what loads with it).
+#
+# SirMashedPotato.InsectsHaveNoBones, Workshop 2041677515, declares 1.3, 1.4 and 1.5. About.xml names it in
+# incompatibleWith. RimWorld does not refuse two mods that patch the same defs. The original's patch names
+# DankPyon.ButcherProperties, a class Medieval Overhaul renamed, and the game logs that; feature 07 asserts the
+# line, so a green run says the incompatibility is still worth declaring. It goes red the day the original is
+# updated, which is the day the declaration can be reconsidered.
+#
+# The item is not in the WSL install's cache: downloading it goes through Use-Wsl.ps1 (PickleTools/Headless/README.md).
+DankPyon.Medieval.Overhaul 3219596926
+SirMashedPotato.InsectsHaveNoBones 2041677515

@@ -1,0 +1,14 @@
+# Pass "mo": Medieval Overhaul, Alpha Animals and Megafauna beside the mod.
+#
+# Overlay entries are staged in the order written, and the mod under test comes after them, which is the order
+# its loadAfter asks for. Alpha Animals needs Vanilla Expanded Framework (its About names it as a hard
+# dependency); Medieval Overhaul's own hard dependencies were not read, because its Workshop folder was absent
+# when this map was written: if the staging stops on "no Workshop id known for ...", name that dependency here.
+#
+# None of these four Workshop items is in the WSL install's cache. Downloading them is work on the machine and
+# goes through Use-Wsl.ps1, like any other (PickleTools/Headless/README.md).
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+sarg.alphaanimals 1541721856
+Spino.Megafauna 1055485938
+DankPyon.Medieval.Overhaul 3219596926
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod

@@ -6,11 +6,12 @@ first release could still have) and `unverified` (something that could not be ch
 
 ## Unverified
 
-- **The Pickle suite is not written.** `TESTING.md` plans five passes and the scenarios. One of them
-  needs a step that butchers a pawn and reads the products; no such step exists, so it is a small C#
-  companion. Without it the effective result of butchering is not observed anywhere.
-- **The 16 combinations of `TEST_SCENARIOS.md`, the existing-save add/remove, and a log read** have never
-  been played in a game.
+- **The Pickle suite is written and has never been played.** `Tests/Pickle/` holds seven features, a local step
+  assembly that butchers a pawn and reads the products, and five pass maps; `Check-Steps.ps1` and the build are
+  green. Its README lists what nobody has checked: the dependency downloads in the WSL cache, the hard
+  dependencies of Medieval Overhaul and Outland Core, Outland Core's bone name, and butchering a live unspawned
+  pawn. The 16 combinations of `TEST_SCENARIOS.md`, the existing-save add/remove and a log read have never been
+  played in a game.
 - **`Tests/Audit-PatchEngine.ps1` could not be replayed on 2026-09-28**: the Medieval Overhaul and Outland
   Core Workshop folders were no longer on disk. Its 2026-09-13 results still stand for the six patch
   files and `LoadFolders.xml`, whose SHA-256 are unchanged; only `About.xml` changed since (metadata).

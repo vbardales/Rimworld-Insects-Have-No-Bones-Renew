@@ -1,0 +1,4 @@
+# Pass "minimal": the mod alone, with nothing optional. Neither integration folder loads, so nothing is patched;
+# what the pass proves is that the mod loads clean and that a vanilla insect still butchers into meat.
+# The one extra is the development tool that audits a mod's load, staged from this collection.
+nelim.pickletools.loadaudit path:PickleTools/LoadAudit/Mod

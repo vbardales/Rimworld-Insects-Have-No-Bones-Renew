@@ -36,7 +36,7 @@ load order it computes) is not tested: the mod answers for what it declares, whi
 
 ## Pass plan: five passes
 
-`Tests/Pickle/wsl-deps.<name>.map` files are not written yet; each pass is one request to the dispatcher
+`Tests/Pickle/wsl-deps.<name>.map` files are written, none played; each pass is one request to the dispatcher
 (`Submit-PickleRun.ps1 -DepMap wsl-deps.<name>.map`), language English. Workshop ids: Medieval Overhaul
 `3219596926`, Outland Core `2755501685`, Alpha Animals `1541721856`, Megafauna `1055485938`, the original
 mod `2041677515`. The hard dependencies of Medieval Overhaul and Outland Core themselves are not copied by
@@ -55,16 +55,15 @@ Not run, with the reason: a pass per absent-animal-mod combination (the 16 combi
 restart pass (the mod owns no player-facing text and no setting, see `STATUS.md`, so there is nothing to
 translate or persist); a pass without a DLC (nothing here depends on one).
 
-## Scenarios still to write
+## The Pickle suite
 
-| Scenario | Passes | Needs |
-| --- | --- | --- |
-| The load of the mod is clean | 1 to 4 | `LoadAudit` |
-| The mod's own patches are attributed to it (`def ... was patched by mod ...`) on representative Defs | 2 to 4 | Pickle's own steps |
-| Butchering a base insect, an inherited Alpha Animals insect, a no-fat Alpha Animals creature and an arthropod gives the expected products | 2 to 4 | **A step that butchers a pawn and reads the products: none exists.** Writing it is C#, in a companion, and it is the one real piece of work in this plan |
-| A muffalo and a cow are not changed | 2 to 4 | the same step |
-| The declared incompatibility still shows its symptom | 5 | Pickle's log steps |
-
+Written on 2026-09-28 in `Tests/Pickle/`, **not played**: seven features, thirty-two scenarios, one local C# step
+assembly (six butcher steps and one log step) and five pass maps. Its `README.md` has the passes' filters, the
+expected counts and the list of what nobody has checked. `Tests/Pickle/Check-Steps.ps1` proves offline that every
+step line resolves to exactly one step. The one real piece of work in it is the step that butchers a pawn and
+reads the products, since none existed. It asserts meat first, so a suppressed bone is never confused with an
+animal that yields nothing, and a muffalo and a cow as controls, so a missing bone is never confused with a bone
+mod that does nothing.
 ## When this mod can be called `tested`
 
 Cumulative conditions, on top of the ordinary ones in `AUDIT.md`:

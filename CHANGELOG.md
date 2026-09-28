@@ -12,6 +12,8 @@ The version that arrives with `published` is `1.0.0`. Until then nothing here ha
   documents read and the version of each.
 - Record in `ATTRIBUTION.md` that the original mod has no public source repository, so there is nothing
   to fork or to send a pull request to.
+- Add the Pickle suite (`Tests/Pickle/`): seven features, thirty-two scenarios, a local step assembly that butchers a
+  fresh adult and reads the products, and five pass maps. It is written and checked offline, not played.
 - Ignore Windows folder icons, `desktop.ini`, DirectDraw textures and Pickle run evidence.
 - Rename the mod to *Insects don't have bones Renew*: the display name, the README title and the title on the
   Workshop preview now end in `Renew` instead of `1.6`. The `packageId` is unchanged.
