@@ -88,7 +88,13 @@ Written on 2026-09-28. Every line below is open until a run settles it.
   bone, which fails if the default multiplier makes it nothing.
 - **Which creature yields meat.** Every Alpha Animals and Megafauna sample was chosen because the game generates
   meat for a flesh animal, not because it was seen. A red on `holds meat` means the sample cannot discriminate and
-  should be replaced, not that the mod failed.
+  should be replaced, not that the mod failed. This is exactly what happened on 2026-09-29 (mo-0220807):
+  `AA_Agaripawn` (its `CompProperties_AnimalProduct` replaces the butcher yield with `AA_AgariluxRawFungus`
+  instead of adding to it) and `AA_GreenGoo` (yields nothing) both failed on the precondition and were
+  replaced with `AA_Bumbledrone` and `AA_Mantrap`, chosen from the same lists for inheriting
+  `AnimalThingBase` directly with no such comp, the same shape as `AA_Aerofleet`, which already produced
+  meat in that run. Not replayed yet. The other four samples (megafauna, base insects, controls) all
+  passed their `holds meat` precondition in that same run.
 
 ## Checks that need no game
 
