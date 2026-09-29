@@ -30,7 +30,11 @@ const root = path.resolve(__dirname, '..');
   let removed = 0;
   for (let p = 0; p < w * h; p++) if (visited[p]) removed++;
   console.log(`removed ${removed} of ${w * h} pixels (${(100 * removed / (w * h)).toFixed(1)}%)`);
+  // Cutting out at 128px then letting the browser scale to 240px in Preview.html magnified
+  // the flood-fill's hard alpha edge into visible pixelation. Upscale here instead, with a
+  // sharp kernel that also anti-aliases the alpha channel, so the edge is smooth going in.
   await sharp(data, { raw: { width: w, height: h, channels: c } })
+    .resize(512, 512, { kernel: 'lanczos3' })
     .png({ compressionLevel: 9 })
     .toFile(path.join(root, 'Art/ModIcon-cutout.png'));
 })();
