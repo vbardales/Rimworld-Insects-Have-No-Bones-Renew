@@ -22,13 +22,12 @@ first release could still have) and `unverified` (something that could not be ch
 
 ## To do before publishing
 
-- Write `PUBLICATION.md`: the `## Steam description` Markdown block (ending with the source link), the
-  gallery order, the thank-you drafts, the dependencies to declare (none are hard), the answer to the
-  adult-content boxes, and the `### 1.0.0` change note.
-- Thank-you comments, one recipient page each, checked against `WORKSHOP_COMMENTS.md`: Medieval Overhaul
-  (`3219596926`) is already `posted`, so only its `Covers` column gets this mod; Outland Core, Alpha
-  Animals, Megafauna, Rim of Madness - Bones Unofficial Fix (`3252977437`) and the original page
-  (`2041677515`) have no row yet.
+- `PUBLICATION.md` is drafted (2026-09-29): description, dependencies, manual validations, 1.0.0 change
+  note, five thank-you drafts. Two open questions left for the owner inside it (inline Workshop links in
+  the description; whether a gallery is worth making). Nothing posted, nothing added to the shared
+  `WORKSHOP_COMMENTS.md` registry yet.
+- Post the thank-you comments once the item is public, then add their rows to `WORKSHOP_COMMENTS.md` and
+  Medieval Overhaul's `Covers` column (`3219596926`, already `posted` for another mod).
 - GitHub topics (`rimworld`, `rimworld-mod`, `mod`) and the social preview image.
 - Generate the publish workflow once the mod is `tested`, dry-run the exact commit, then publish.
 - Check that `Mod/desktop.ini` (a local Explorer folder icon, ignored by git) is not uploaded: Steam
