@@ -1,6 +1,10 @@
 # Final functional validation
 
-Status: **not executed in game**. The automated checks do not certify this table.
+Status (2026-10-02): **no row below is left as a manual check.** Each is either played by the Pickle suite
+(`Tests/Pickle/`, five passes, see `TESTING.md`) or listed as not applicable with its reason, in the
+"Disposition" table at the end of this file. The table is kept as the statement of what the suite and the
+exclusions must cover. The automated offline checks do not certify it on their own: a row counts only once its
+Pickle scenario has a green report on the revision being tested (`STATUS.md` says where each stands).
 Record game/dependency versions, mod order, language, save provenance, actual results
 and log evidence for each run. Use copied saves and record results outside Mod/.
 
@@ -47,3 +51,26 @@ Example invocation (supply actual installation directories):
 ```powershell
 ./Tests/Audit-PatchEngine.ps1 -Game <game-directory> -Workshop <workshop-294100-directory>
 ```
+
+## Disposition of each row (2026-10-02)
+
+The rows above name `AA_Agaripawn` and `AA_GreenGoo`; both failed the "holds meat" precondition in the game and
+were replaced in the suite (`Tests/Pickle/README.md`, `04-alpha-animals.feature`). A row below is
+**automated** when a Pickle scenario asserts it, and **not applicable** when nothing a test could add remains,
+with the reason.
+
+| Row | Disposition | Where |
+| --- | --- | --- |
+| Startup and guards | Automated | `01-the-mod-loads` in every pass (PickleTools `LoadAudit`: nothing the mod owns in the log since startup). Folder activation and guards for all 16 combinations: `Tests/Audit-PatchEngine.ps1`, offline |
+| Vanilla insects | Automated | `03-base-insects`, passes `mo`, `outland`, `both` |
+| Inherited insects | Automated | `04-alpha-animals`: `AA_Animalisk` (`AA_AlphaBaseInsect`), `AA_BlackSpider` (`BaseInsect2`) |
+| Explicit fat group | Automated | `04-alpha-animals`: `AA_AngelMoth`, `AA_Bumbledrone` keep their fat (passes with Medieval Overhaul) |
+| No-fat group | Automated | `04-alpha-animals`: `AA_Aerofleet`, `AA_RedSpore` yield no fat (passes with Medieval Overhaul) |
+| Megafauna | Automated | `05-megafauna`, passes with Megafauna |
+| Non-target controls | Automated | `06-controls`: a muffalo and a cow still yield the bone mod's bone |
+| Both integrations | Automated | pass `both` |
+| No integrations | Automated | pass `minimal` (`02-minimal-pass`) plus the offline engine test with both folders inactive |
+| English/French | Not applicable | The mod owns no player-facing text, no setting and no shortcut (`STATUS.md`, settings and translation inventories). There is nothing to display in a language, so the suite has no French pass |
+| New colony | Not applicable | The patches act when Defs load, before any colony exists; a new colony and a loaded one read the same Defs. The suite loads a fixture colony and generates its own pawns |
+| Existing save | Not applicable | The mod adds a `DefModExtension` to Defs and sets a stat value on Defs. It adds no Def, no `Comp`, no `Hediff`, no saved field; a save has nothing to read from it and nothing to lose when it goes. Adding and removing is the same Def-load difference as starting a new game |
+| Broader mod list | Not applicable | No repeatable test: "the intended normal mod list" is not a defined set. The `both` pass already loads all four optional mods together. A conflict from a later patch shows as a failed scenario or a player report, not as a case to enumerate |

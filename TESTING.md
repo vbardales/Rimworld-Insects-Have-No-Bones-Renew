@@ -1,8 +1,9 @@
 # Testing
 
 This mod ships XML patches and no code. Almost everything about it can be proved without starting the
-game, and that part is done. What remains is what only a running game can show, and it is planned here
-but **not written and not played yet**. Nothing below is a claim that a pass has run.
+game, and that part is done. What remains is what only a running game can show: the Pickle suite in `Tests/Pickle/` is written and
+partly played (state per pass below, history in `docs/runs/history.md`). A pass counts only when its latest
+report is green on the revision being tested.
 
 `TEST_SCENARIOS.md` is the human-readable list of the final in-game checks. This file says which of them
 become Pickle scenarios, in how many passes, and what to keep afterwards.
@@ -36,7 +37,7 @@ load order it computes) is not tested: the mod answers for what it declares, whi
 
 ## Pass plan: five passes
 
-`Tests/Pickle/wsl-deps.<name>.map` files are written, none played; each pass is one request to the dispatcher
+`Tests/Pickle/wsl-deps.<name>.map` files are written; each pass is one request to the dispatcher
 (`Submit-PickleRun.ps1 -DepMap wsl-deps.<name>.map`), language English. Workshop ids: Medieval Overhaul
 `3219596926`, Outland Core `2755501685`, Alpha Animals `1541721856`, Megafauna `1055485938`, the original
 mod `2041677515`. The hard dependencies of Medieval Overhaul and Outland Core themselves are not copied by
@@ -57,13 +58,31 @@ translate or persist); a pass without a DLC (nothing here depends on one).
 
 ## The Pickle suite
 
-Written on 2026-09-28 in `Tests/Pickle/`, **not played**: seven features, thirty-two scenarios, one local C# step
+Written on 2026-09-28 in `Tests/Pickle/`, played in part (2026-09-29 to 2026-10-01, see below): seven features, thirty-two scenarios, one local C# step
 assembly (six butcher steps and one log step) and five pass maps. Its `README.md` has the passes' filters, the
 expected counts and the list of what nobody has checked. `Tests/Pickle/Check-Steps.ps1` proves offline that every
 step line resolves to exactly one step. The one real piece of work in it is the step that butchers a pawn and
 reads the products, since none existed. It asserts meat first, so a suppressed bone is never confused with an
 animal that yields nothing, and a muffalo and a cow as controls, so a missing bone is never confused with a bone
 mod that does nothing.
+## State of the passes, 2026-10-02
+
+No patch file, `LoadFolders.xml` or `About.xml` changed since `5292f58` (the rename), the Pickle suite did; `Mod/ATTRIBUTION.md` gained a sentence on 2026-10-02, which no scenario reads. `docs/runs/history.md` has the lines.
+
+| Pass | Latest report | What is proved | What is not |
+| --- | --- | --- | --- |
+| `minimal` | `9d8d917`, feature 01 only | The mod loads clean alone | `02-minimal-pass` (2 scenarios) **never played** |
+| `mo` | `6b8e4b5` full; `6ccb5b0` feature 04 | `01`, `03`, `05`, `06` and `04` bar one sample | `04` with `AA_RedSpore` (replacing `AA_InfectedAerofleet`, and before it `AA_Mantrap`, `AA_Agaripawn`, `AA_GreenGoo`): **never played** |
+| `outland` | `6ccb5b0` full | Everything but the `AA_InfectedAerofleet` row | `04` with `AA_RedSpore`: **never played** |
+| `both` | `6b8e4b5` full | Everything but the `AA_Mantrap` rows | `04` with `AA_RedSpore`: **never played** |
+| `incompat-original` | `0220807` | The original mod still logs `Could not find type named DankPyon.ButcherProperties` | nothing open |
+
+Order of the remaining tickets (`AUDIT.md`, 2026-10-02): first what never ran or is red, as small tickets: `minimal`
+filtered on `02-minimal-pass`, then `04-alpha-animals` in `mo` and in `outland`. The non-regression passes (all five,
+whole suite, on the final revision) are deposited together at the end, never before: they replay what is already
+green and go stale at the next commit. A scenario is non-regression once it has a green report on the current logic;
+a change to `Mod/`, to a step it uses or to its own sample makes it new again.
+
 ## When this mod can be called `tested`
 
 Cumulative conditions, on top of the ordinary ones in `AUDIT.md`:
@@ -95,3 +114,12 @@ report of a failed or infrastructure-error attempt once its cause is written in 
 superseded by a newer one for the same scenario and revision, and any report of a superseded build. Never
 delete a report a `STATUS.md` field still points to: repoint it first. Take what you need from your own
 run's archive in `pickle-reports-archive/`, then delete that archive.
+
+### What to keep for this mod
+
+Per pass, the folder trimmed to `summary.json`, `summary.md`, `junit.xml`, `Player.log` and `evidence-complete.txt`
+(about 0.3 to 0.7 MB each). This suite has **no `@review` scenario**, so no capture is ever evidence: the
+`screenshots/` of a run are failure attachments and go, as do `report.html` and `messages.ndjson`. A report stays
+while it is the only proof of a scenario no later run repeated (2026-10-02: `aa-fix-6b8e4b5` for the `mo` pass bar
+feature 04, `both-fix-6b8e4b5` for `both`); it goes when a newer full report of the same pass on the current logic
+replaces it. The `docs/runs/history.md` line stays, always.

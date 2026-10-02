@@ -1,6 +1,6 @@
 # Pickle suite for Insects don't have bones Renew
 
-In-game scenarios for a mod that ships six XML patches and no code. **Written and checked offline; never played.**
+In-game scenarios for a mod that ships six XML patches and no code. **Written 2026-09-28, played in part from 2026-09-29; state per pass in `../../TESTING.md`.**
 `../../TESTING.md` says what is proved without the game and what only a running game can show; this suite is
 the second half. Nothing in this folder is part of `Mod/`, which is what Steam receives whole.
 
@@ -69,9 +69,9 @@ discovered and played, and read `exitReason` before the counts.
 A skipped scenario is not a passed one: `04` and `05` are skipped wherever their mod is not staged, and each has to
 have run in a pass that gives it its condition. `07` is skipped in every pass but its own.
 
-## Before the first run, and what nobody has checked
+## What nobody has checked
 
-Written on 2026-09-28. Every line below is open until a run settles it.
+Written on 2026-09-28, amended 2026-10-02. A line stays open until a run settles it; the first runs settled the staging (dependencies resolve) and that the product list is read from a live unspawned pawn (the controls and base insects pass in `mo`, `outland` and `both`).
 
 - **Medieval Overhaul and Outland Core came from the WSL cache**, downloaded through `Use-Wsl.ps1` on 2026-09-28: the
   Windows Workshop folder no longer holds them. Their hard dependencies were read from their About.xml on that day
@@ -91,9 +91,7 @@ Written on 2026-09-28. Every line below is open until a run settles it.
   should be replaced, not that the mod failed. This is exactly what happened on 2026-09-29 (mo-0220807):
   `AA_Agaripawn` (its `CompProperties_AnimalProduct` replaces the butcher yield with `AA_AgariluxRawFungus`
   instead of adding to it) and `AA_GreenGoo` (yields nothing) both failed on the precondition and were
-  replaced with `AA_Bumbledrone` and `AA_Mantrap`, chosen from the same lists for inheriting
-  `AnimalThingBase` directly with no such comp, the same shape as `AA_Aerofleet`, which already produced
-  meat in that run. Not replayed yet. The other four samples (megafauna, base insects, controls) all
+  replaced with `AA_Bumbledrone` and `AA_Mantrap`. `AA_Mantrap` failed again (2026-09-30, `AA_CactusMeat` is not flagged meat), so did its replacement `AA_InfectedAerofleet` (2026-10-01, leather only). The slot is now `AA_RedSpore` (`<useMeatFrom>Pig</useMeatFrom>`, no product comp), not yet played. The other four samples (megafauna, base insects, controls) all
   passed their `holds meat` precondition in that same run.
 
 ## Checks that need no game

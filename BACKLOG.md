@@ -2,16 +2,16 @@
 
 What remains for this mod, in three kinds: `defect` (a known fault left unfixed), `feature` (something a
 first release could still have) and `unverified` (something that could not be checked). Last reviewed
-2026-09-28. Nothing here is a claim that the item was done.
+2026-10-02. Nothing here is a claim that the item was done.
 
 ## Unverified
 
-- **The Pickle suite is written and has never been played.** `Tests/Pickle/` holds seven features, a local step
-  assembly that butchers a pawn and reads the products, and five pass maps; `Check-Steps.ps1` and the build are
-  green. Its README lists what nobody has checked: the dependency downloads in the WSL cache, the hard
-  dependencies of Medieval Overhaul and Outland Core, Outland Core's bone name, and butchering a live unspawned
-  pawn. The 16 combinations of `TEST_SCENARIOS.md`, the existing-save add/remove and a log read have never been
-  played in a game.
+- **Pickle passes still to play** (`TESTING.md`, "State of the passes"): `02-minimal-pass` in `minimal`, then
+  `04-alpha-animals` with its new `AA_RedSpore` samples in `mo` and `outland`, as small tickets; then the five
+  passes whole, together, on the final revision (non-regression, last). Nothing is deposited yet beyond the
+  tickets listed in `STATUS.md`.
+- The 16 combinations of `TEST_SCENARIOS.md` are covered offline by `Tests/Audit-PatchEngine.ps1`; the rows that
+  are neither automated nor applicable are none (see its "Disposition" table).
 
 ## Defects
 
