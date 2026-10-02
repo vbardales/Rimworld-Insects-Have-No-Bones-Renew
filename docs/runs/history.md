@@ -17,3 +17,4 @@ git. "Superseded" means a later line replaces it for every scenario it played.
 | 2026-10-01 | `6ccb5b0` | `mo`, `04` only | 6 green, 2 red: `AA_InfectedAerofleet` yields leather only, no meat. Replaced by `AA_RedSpore` | `aa-fix-6ccb5b0` |
 | 2026-10-01 | `6ccb5b0` | `outland`, full | 14 green, 1 red (`AA_InfectedAerofleet`, same cause), 1 skipped. Latest report of the pass | `outland-retry` |
 | 2026-10-02 | `9a1cc56` | `minimal`, `02-minimal-pass` | green, 2 of 2, `exitReason: passed`. First play of these scenarios | `minimal-02-9a1cc56` |
+| 2026-10-02 | `9a1cc56` | `mo`, `04` only | 10 green, 2 red: `AA_RedSpore` yields leather only (a spore has no flesh). Replaced by `AA_Cactipine` | `mo-04-9a1cc56` |
