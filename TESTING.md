@@ -71,7 +71,7 @@ No patch file, `LoadFolders.xml` or `About.xml` changed since `5292f58` (the ren
 
 | Pass | Latest report | What is proved | What is not |
 | --- | --- | --- | --- |
-| `minimal` | `9d8d917`, feature 01 only | The mod loads clean alone | `02-minimal-pass` (2 scenarios) **never played** |
+| `minimal` | `9a1cc56`, feature 02 (and `9d8d917`, feature 01) | The mod loads clean alone; a vanilla insect still butchers into meat | nothing open |
 | `mo` | `6b8e4b5` full; `6ccb5b0` feature 04 | `01`, `03`, `05`, `06` and `04` bar one sample | `04` with `AA_RedSpore` (replacing `AA_InfectedAerofleet`, and before it `AA_Mantrap`, `AA_Agaripawn`, `AA_GreenGoo`): **never played** |
 | `outland` | `6ccb5b0` full | Everything but the `AA_InfectedAerofleet` row | `04` with `AA_RedSpore`: **never played** |
 | `both` | `6b8e4b5` full | Everything but the `AA_Mantrap` rows | `04` with `AA_RedSpore`: **never played** |
