@@ -34,7 +34,7 @@ already close to final BBCode (plain text, one `[url=...]` line). The block belo
 ```
 [b]Insects don't have bones Renew[/b]
 
-A 1.6 port of SirMashedPotato and Hiroyan's Insects don't have bones. I am not the author of this mod; the work here is what it took to make it run on 1.6, and to repair what the port turned up.
+A port to the latest RimWorld version of SirMashedPotato and Hiroyan's Insects don't have bones. I am not the author of this mod; the work here is what it took to make it run on the latest RimWorld version, and to repair what the port turned up.
 
 Butcher a megaspider in a colony running Medieval Overhaul or Outland Core and you get bone. An insect does not have bones. This takes them away, for the base game's insects, for anything a mod builds on top of BaseInsect, and for the creatures in Megafauna and Alpha Animals that no other rule reaches.
 
@@ -46,15 +46,15 @@ Butcher a megaspider in a colony running Medieval Overhaul or Outland Core and y
 
 Neither Medieval Overhaul nor Outland Core is required — install one, the other, or both, and the matching folder loads on its own. Megafauna and Alpha Animals are optional inside each: the patches test for the defs they touch, so having neither installed does nothing and errors at nothing.
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3252977437]Rim of Madness - Bones Unofficial Fix[/url] is deliberately NOT covered. It already ships the same insect, Megafauna and Alpha Animals patches itself, and it is alive in 1.6. Two mods writing the same stat onto the same defs is only a way to get it wrong twice.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3252977437]Rim of Madness - Bones Unofficial Fix[/url] is deliberately NOT covered. It already ships the same insect, Megafauna and Alpha Animals patches itself, and it is alive in the latest RimWorld version. Two mods writing the same stat onto the same defs is only a way to get it wrong twice.
 
-[b]What changed in the 1.6 port[/b]
+[b]What changed in the port[/b]
 
 Medieval Overhaul renamed its namespace from DankPyon to MedievalOverhaul in its 1.5 build. Every Medieval Overhaul patch in this mod named DankPyon.ButcherProperties, a type that has not existed since. RimWorld cannot resolve the class, falls back to the abstract DefModExtension, fails to construct it, and drops the def that was being loaded. Because the patch was applied to the abstract BaseInsect, every insect in the game went with it — megaspider, megascarab, spelopede and every modded insect below them. That was already true in 1.5, and it is what makes this a repair rather than a version bump.
 
 The Alpha Animals patches named AA_PseudoBaseMechanoid and AA_WaywardMobileAssembler, neither of which exists in Alpha Animals any more. In the Outland Core file the dead name was the third of seventy-nine operations inside a sequence, and a sequence stops at the first operation that fails rather than skipping it — so seventy-seven of them had never run.
 
-The operations are now grouped by the value they write instead of being one per creature, so a name going missing upstream no longer takes the rest of the file with it. Every remaining name was checked against the 1.6 files of Alpha Animals, Megafauna, Medieval Overhaul and Outland Core.
+The operations are now grouped by the value they write instead of being one per creature, so a name going missing upstream no longer takes the rest of the file with it. Every remaining name was checked against the current files of Alpha Animals, Megafauna, Medieval Overhaul and Outland Core.
 
 The mod's loadFolders.xml also never listed its own Common folder, so the two files in it had never loaded on any version. They were the Rim of Madness patches, and they are gone for the reason above.
 
