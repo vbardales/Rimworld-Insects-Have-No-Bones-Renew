@@ -3,8 +3,7 @@
 #   AA_BlackSpider inherits BaseInsect2
 #   AA_AngelMoth   named in the "no bone, fat kept" list
 #   AA_Bumbledrone named in the same list, and not an Insectoid by inheritance
-#   AA_Aerofleet         named in the "neither bone nor fat" list
-#   AA_Cactipine         named in the same list
+#   AA_Aerofleet         named in the "neither bone nor fat" list (the only sample of it that holds meat)
 #
 # AA_Agaripawn and AA_GreenGoo were the first choice for the last two rows and both failed on the "holds
 # meat" precondition (mo-0220807, 2026-09-29): Agaripawn's CompProperties_AnimalProduct replaces its
@@ -16,7 +15,9 @@
 # AA_RedSpore, the "neither" list's member that sets <useMeatFrom>Pig</useMeatFrom> (so ordinary
 # pig meat) and carries no AnimalProduct or DropOnDeath comp. It failed too (mo-04-9a1cc56, 2026-10-02):
 # a spore has no flesh, leather only. Replaced with AA_Cactipine, a rat-bodied quadruped (QuadrupedAnimalWithPawsAndTail,
-# default meat, no meatDef override). Not replayed yet.
+# default meat, no meatDef override). It failed too (mo-04-5492c53, 2026-10-11): it is a cactus creature, it yields
+# AA_CactusMeat, never flagged IsMeat, same as AA_Mantrap. No further replacement: the "neither" list holds only
+# cactus, goo, spore, jelly or no-meat bodies; AA_Aerofleet alone represents it, five replacements tried.
 #
 # Played when Alpha Animals is staged; skipped by requirement in the passes without it, where it counts as
 # skipped and not as passed. The fat scenarios are Medieval Overhaul's alone (!@mo in the pass "outland").
@@ -36,7 +37,6 @@ Feature: Alpha Animals creatures give no bone
       | AA_AngelMoth   |
       | AA_Bumbledrone |
       | AA_Aerofleet |
-      | AA_Cactipine |
 
   @mo
   Scenario Outline: a creature of the "no fat" list gives no fat under Medieval Overhaul
@@ -48,7 +48,6 @@ Feature: Alpha Animals creatures give no bone
     Examples:
       | kind         |
       | AA_Aerofleet |
-      | AA_Cactipine |
 
   @mo
   Scenario Outline: a creature of the "fat kept" list keeps its fat under Medieval Overhaul

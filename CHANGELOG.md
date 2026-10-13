@@ -19,6 +19,7 @@ The version that arrives with `published` is `1.0.0`. Until then nothing here ha
   Workshop preview now end in `Renew` instead of `1.6`. The `packageId` is unchanged.
 - Pickle suite: the Alpha Animals samples that cannot discriminate (no meat on the butcher table) are replaced,
   last `AA_InfectedAerofleet` by `AA_RedSpore`; first reports of the passes are in `docs/runs/history.md`.
+- Rename the build folder `.build/` to `build/`; remove em dashes from the About description; add `FRENCH_REVIEW.md`.
 - Move the gallery copy of the Preview to `Art/Gallery/0-preview.png` (single-digit convention) and add
   `docs/runs/`; `TEST_SCENARIOS.md` now says, row by row, which scenario automates it or why it does not apply.
 

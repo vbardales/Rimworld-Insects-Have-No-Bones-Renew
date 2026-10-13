@@ -1,7 +1,7 @@
 .claude/
 .codex/
 .agents/
-.build/
+build/
 Source/obj/
 Source/bin/
 .vs/
@@ -35,3 +35,4 @@ desktop.ini
 # The Pickle suite's step DLL is built from Tests/Pickle/Source before every run and is not part of the
 # source: Pickle loads it when the game starts, so a stale one tests the previous code.
 /Tests/Pickle/Mod/Pickle/Assemblies/
+Art/.render/

@@ -19,3 +19,5 @@ git. "Superseded" means a later line replaces it for every scenario it played.
 | 2026-10-02 | `9a1cc56` | `minimal`, `02-minimal-pass` | green, 2 of 2, `exitReason: passed`. First play of these scenarios | `minimal-02-9a1cc56` |
 | 2026-10-02 | `9a1cc56` | `mo`, `04` only | 10 green, 2 red: `AA_RedSpore` yields leather only (a spore has no flesh). Replaced by `AA_Cactipine` | `mo-04-9a1cc56` |
 | 2026-10-02 | `9a1cc56` | `outland`, `04` only | 5 green, 1 red: `AA_RedSpore` yields `Leather_Light` only. Replaced by `AA_Cactipine` | `outland-04-9a1cc56` |
+| 2026-10-11 | `5492c53` | `mo`, `04` only | 10 green, 2 red: `AA_Cactipine` yields `AA_CactusMeat` (not meat), like `AA_Mantrap`. Sample dropped; `AA_Aerofleet` alone covers the "neither" list | `mo-04-5492c53` |
+| 2026-10-12 | `5492c53`+edit | `outland`, `04` only | green, 5 of 5, `exitReason` passed, without `AA_Cactipine` | `outland-04-nocactipine` |

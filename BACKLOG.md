@@ -7,7 +7,7 @@ first release could still have) and `unverified` (something that could not be ch
 ## Unverified
 
 - **Pickle passes still to play** (`TESTING.md`, "State of the passes"): `02-minimal-pass` in `minimal`, then
-  `04-alpha-animals` with its new `AA_Cactipine` samples in `mo` and `outland`, as small tickets; then the five
+  `04-alpha-animals` in `outland` (`AA_Cactipine` dropped 2026-10-11), as small tickets; then the five
   passes whole, together, on the final revision (non-regression, last). Nothing is deposited yet beyond the
   tickets listed in `STATUS.md`.
 - The 16 combinations of `TEST_SCENARIOS.md` are covered offline by `Tests/Audit-PatchEngine.ps1`; the rows that

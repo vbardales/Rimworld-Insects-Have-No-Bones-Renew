@@ -17,15 +17,15 @@ Medieval Overhaul: the base game's insects keep their fat and lose their bone. A
 
 Outland Core: the same creatures, through the Outland_BoneAmount stat.
 
-Neither Medieval Overhaul nor Outland Core is required — install one, the other, or both, and the matching folder loads on its own. Megafauna and Alpha Animals are optional inside each: the patches test for the defs they touch, so having neither installed does nothing and errors at nothing.
+Neither Medieval Overhaul nor Outland Core is required (install one, the other, or both) and the matching folder loads on its own. Megafauna and Alpha Animals are optional inside each: the patches test for the defs they touch, so having neither installed does nothing and errors at nothing.
 
 Rim of Madness - Bones is deliberately NOT covered. Rim of Madness - Bones Unofficial Fix already ships the same insect, Megafauna and Alpha Animals patches itself, and it is alive in 1.6. Two mods writing the same stat onto the same defs is only a way to get it wrong twice.
 
 WHAT CHANGED IN THE 1.6 PORT
 
-Medieval Overhaul renamed its namespace from DankPyon to MedievalOverhaul in its 1.5 build. Every Medieval Overhaul patch in this mod named DankPyon.ButcherProperties, a type that has not existed since. RimWorld cannot resolve the class, falls back to the abstract DefModExtension, fails to construct it, and drops the def that was being loaded. Because the patch was applied to the abstract BaseInsect, every insect in the game went with it — megaspider, megascarab, spelopede and every modded insect below them. That was already true in 1.5, and it is what makes this a repair rather than a version bump.
+Medieval Overhaul renamed its namespace from DankPyon to MedievalOverhaul in its 1.5 build. Every Medieval Overhaul patch in this mod named DankPyon.ButcherProperties, a type that has not existed since. RimWorld cannot resolve the class, falls back to the abstract DefModExtension, fails to construct it, and drops the def that was being loaded. Because the patch was applied to the abstract BaseInsect, every insect in the game went with it: megaspider, megascarab, spelopede and every modded insect below them. That was already true in 1.5, and it is what makes this a repair rather than a version bump.
 
-The Alpha Animals patches named AA_PseudoBaseMechanoid and AA_WaywardMobileAssembler, neither of which exists in Alpha Animals any more. In the Outland Core file the dead name was the third of seventy-nine operations inside a sequence, and a sequence stops at the first operation that fails rather than skipping it — so seventy-seven of them had never run.
+The Alpha Animals patches named AA_PseudoBaseMechanoid and AA_WaywardMobileAssembler, neither of which exists in Alpha Animals any more. In the Outland Core file the dead name was the third of seventy-nine operations inside a sequence, and a sequence stops at the first operation that fails rather than skipping it, so seventy-seven of them had never run.
 
 The operations are now grouped by the value they write instead of being one per creature, so a name going missing upstream no longer takes the rest of the file with it. Every remaining name was checked against the 1.6 files of Alpha Animals, Megafauna, Medieval Overhaul and Outland Core.
 
