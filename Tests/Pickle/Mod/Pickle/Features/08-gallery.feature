@@ -1,12 +1,12 @@
 # Workshop gallery, "The day the giants came to the fence" (shotlist of 2026-10-26, replaces the plan of 2026-10-15; PUBLICATION.md, "Screenshots" and
 # "Gallery subtitles"). NOT PLAYED. The scenarios below were written to this shotlist on 2026-10-26, with the steps NPT confirmed (see "Steps" at the end of this
-# header). Scene 4 differs from its line: the dog stands (no gnawing job without the mammal bone def) and Nelim crosses without meat; both come back once
+# header). Scene 4: the dog stands (no gnawing job without the mammal bone def); it gnaws once
 # the first run names the bone item. Every cell is unread: the run decides.
 #
 # STORY. One day in Nelim's Sanctuary, the only colonist (NSB's Nelim; no other colonist, owner rule 2026-10-25). Giant insects walked up to the
 # bamboo fence overnight. Nelim meets them at dawn, the hunt is over by morning, the carcass is butchered, and the one thing the whole day shows is
-# what the mod changes: an insect gives meat, fat and leather and no bone. Thread of the series: Shogun the Labrador (an animal of the fixture, spawned
-# by name) sniffs the carcass in 2, watches the work in 3, finds the Muffalo bone and no spider bone in 4, sleeps by the fire in 5. Rhythm: one hour per
+# what the mod changes: an insect gives meat, fat and leather and no bone. Thread of the series: Shogun the Labrador (an animal of the fixture, placed
+# by name) faces the carcass in 2, watches the work in 3, stands by the Muffalo bone and the bone-free spider pile in 4, lies by the fire in 5. Rhythm: one hour per
 # image (6, 9, 11, 14, 19), the photographer's choice (GALLERY.md, 2026-10-14); same day, clear sky, lantern lit at dawn and again at dusk. Opening image 1
 # (the place and the giants), closing image 5 (the hearth). Shots: wide (1), medium (2), medium-tight (3), tight (4), medium-wide (5).
 #
@@ -20,16 +20,21 @@
 #   centre-back, low light. Decor: DR_StickLantern lit on the gatepost (removed after). Says: the giants came in the night. Moment: just after they
 #   appear, just before she opens the gate. Gesture: `"Nelim" is forced to walk to (x, z)` then `I advance the paused game by exactly N ticks` (played, ticket 531b). Estimate 4.5
 #   (j weak: the creatures, not yet the mod).
-# 2 workshop-2-the-carcass. gravel-yard, 09:00. Nelim (no duster) walks up to a dead Megaspider; Shogun trots beside her, nose toward the carcass.
-#   Root size 6, carcass lower right, Nelim centre-left, long morning shadows. Decor: three Plant_Daylily fully grown at the edge, a Stool. Says: the hunt
-#   is over, the work begins. Moment: just after the kill, just before the knife. Gesture: forced walk for Nelim, Shogun stands facing her (played). 4.5 (j weak).
+# 2 workshop-2-the-carcass. gravel-yard, 09:00, Clear, +25 ticks. Nelim (no duster: it warmed up) walks up to a dead Megaspider; Shogun, facing the
+#   carcass (East), head toward it, waits for her to arrive. Root size 6, carcass lower right, Nelim centre-left, long morning shadows. Decor (the hunt):
+#   a Bow_Short on the gravel near Nelim's path, a Stool by the carcass. Says: the hunt is over, the work begins. Moment: the kill is just behind her, the
+#   knife is next. Gesture: `"Nelim" is forced to walk to` + paused advance of 25 ticks (played); Shogun stands facing the carcass. 4.5 (j weak).
 # 3 workshop-3-the-butcher-table. barn, 11:00. Nelim at the TableButcher (194, 237) with the knife, the carcass beside it, the products (meat, fat, leather)
 #   piled on the table in the foreground; Shogun at the door watching. Root size 5, table centre, Nelim left, carcass right. Says: every cut comes away
 #   clean. Moment: mid-cut. Gesture: bill + `forced into the job "DoBill"` on TableButcher, Meat beside it (compiled, never played; fallback: still). 4.0 (e, j weak).
-# 4 workshop-4-the-products. barn east side, 14:00. Tight (root 4): left, the products of a Muffalo with its bone; right, those of the Megaspider, no
-#   bone; Shogun in the foreground gnaws the Muffalo bone, head turned toward the spider's pile; Nelim crosses the frame behind carrying meat. Says: one
-#   bone for the dog, none for the spider (the contrast carries the mod; not a catalogue plate because the dog and Nelim act). Risk: the bone item of a
-#   mammal under Medieval Overhaul is NOT confirmed: the first run reads the Muffalo products, and the scene is redone if there is no bone item. 4.5 (e weak).
+# 4 workshop-4-the-products. barn east side, 14:00, Clear, +40 ticks. The east corner of the barn emptied then dressed as a larder: a lit Brazier (203, 234),
+#   a Shelf (204, 236), a pile of DankPyon_Straw (204, 241). Tight (root 4): in front, the products of the Megaspider (z 236); behind, those of a Muffalo with
+#   its bone (z 239); Shogun side-on in the foreground, head level with the Muffalo pile; Nelim, rust shirt, has just picked up a lump of fat from the spider
+#   pile and carries it to the shelf. Says: one bone for the dog, none for the spider. Moment: just after the butchering, just before she shelves the fat.
+#   Gesture: `"Nelim" is forced to haul 1 of the item "DankPyon_Fat"` + paused advance of 40 ticks (compiled, not played); Shogun stands (a gnawing job waits
+#   for the bone item). Thumbnail: each pile is five cells wide at root 4, the bone a pale shape against red meat, item labels hidden. Risk: the bone item of
+#   a mammal under Medieval Overhaul is NOT confirmed (the Megaspider's fat is DankPyon_Fat, read in the mod's Defs); the first run reads the Muffalo
+#   products, and the scene is redone if there is no bone item. 4.5 (j weak until the bone is seen).
 # 5 workshop-5-the-hearth. fire-pit, 19:00. Nelim (cream shirt, ponytail) at the hearth, warming her hands; Shogun lies by the fire; an Alpha Animals
 #   AA_Aerofleet rests side-on near the wall; the hall's thrumbos are sent away (one subject: the supper). Root size 6, fire centre, Nelim right,
 #   Shogun foreground. Decor: DR_StickLantern lit (183, 113), a PlantPot with Plant_Daylily. Says: supper by the fire, nothing left to pick out. Gesture:
@@ -38,7 +43,6 @@
 # Mods: the "gallery" map (wsl-deps.gallery.map): Sanctuary, bodies and faces, Medieval Overhaul (the fat and the bone contrast), Alpha Animals,
 # Megafauna, Stick Lantern. Nothing staged ships with this mod. Colonists: Nelim only. Animals dressed: none.
 # Steps (NPT answered 2026-10-26, nothing refused): forced walk + paused advance (played); DoBill at a butcher table, forced haul, lying animal, Ingest as a sniff (compiled, not played); the animal of the fixture "Shogun" stands at a cell facing a direction (played; spawn a named one if absent).
-# 2026-10-26. On a refusal the owner arbitrates. Scenes keep a still-pose fallback (the estimates above assume it).
 @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.colonistrace @requires:spino.megafauna @requires:sarg.alphaanimals @requires:dankpyon.medieval.overhaul
 Feature: Workshop gallery
 
@@ -78,9 +82,7 @@ Feature: Workshop gallery
     And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
     And Nelim's Sanctuary: the animals are removed from the sanctuary "gravel-yard"
     And Nelim's Pickle Tools: I place the decor "Stool" at (166, 141)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 146) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (175, 147) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (173, 148) fully grown
+    And Nelim's Pickle Tools: I place the decor "Bow_Short" at (165, 146)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
@@ -131,15 +133,19 @@ Feature: Workshop gallery
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I let 10 ticks pass
     And Nelim's Sanctuary: Nelim has her own face
-    And Insects Have No Bones Renew: the butcher products of a fresh adult "Muffalo" lie in a row from (199, 236)
-    And Insects Have No Bones Renew: the butcher products of a fresh adult "Megaspider" lie in a row from (199, 239)
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 234) facing East
-    And Nelim's Pickle Tools: "Nelim" stands at (204, 241) facing West
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (200, 241)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (203, 234)
+    And Nelim's Pickle Tools: the decor "Brazier" at (203, 234) is lit
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 236)
+    And Nelim's Pickle Tools: I place the decor "DankPyon_Straw" at (204, 241)
+    And Insects Have No Bones Renew: the butcher products of a fresh adult "Megaspider" lie in a row from (199, 236)
+    And Insects Have No Bones Renew: the butcher products of a fresh adult "Muffalo" lie in a row from (199, 239)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (199, 234) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (204, 240) facing West
+    And Nelim's Pickle Tools: "Nelim" is forced to haul 1 of the item "DankPyon_Fat" to (204, 237)
     When Nelim's Pickle Tools: I frame the area centred on (201, 238) at root size 4
     And Nelim's Pickle Tools: the item and name labels are hidden
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I advance the paused game by exactly 20 ticks
+    And Nelim's Pickle Tools: I advance the paused game by exactly 40 ticks
     Then I take a screenshot "gallery-4-the-products"
 
   Scenario: 5 dusk, the hearth
