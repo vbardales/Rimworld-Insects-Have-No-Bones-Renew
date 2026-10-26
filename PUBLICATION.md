@@ -109,15 +109,15 @@ out in rows (meat, fat, leather, and no bone) and by the story, not by a window.
 
 | # | Hour | Place (`SanctuaryBacklot/docs/SANCTUAIRE-LIEUX.md`) | Scene | Animals, seen from the front when possible |
 |---|---|---|---|---|
-| 1 | 6 | `enclosure-south` | Nelim at the gate, hand up, looking at what stands at the fence | Arthropleura and Megascarab (Megafauna), facing the camera |
-| 2 | 9 | `gravel-yard` | Nelim walks a Megaspider carcass in on a sled of poles, her ponytail swinging | Megaspider corpse |
-| 3 | 11 | `preindustrial-workshop` | Nelim at the butcher table, knife in hand, the carcass half cut, a stack of meat beside her | Megaspider corpse |
-| 4 | 14 | `exhibition-zone` | The day's products in rows, one item per cell: meat, fat, leather. Nothing else on the carpet | none |
-| 5 | 19 | `fire-pit` | Nelim by the hearth with a Stick Lantern lit, the meal cooking, an Alpha Animals creature (AA_Aerofleet) resting near | AA_Aerofleet, face on |
+| 1 | 6 | `enclosure-south` | Nelim walks toward the gate, a lit Stick Lantern on the post | Arthropleura facing the camera, Megascarab side-on at the fence |
+| 2 | 9 | `gravel-yard` | Nelim walks up to a dead Megaspider, Shogun trotting beside her | Megaspider corpse, Shogun (Labrador) |
+| 3 | 11 | `barn` | Nelim at the butcher table, knife work, products piled on the table | Megaspider corpse, Shogun at the door |
+| 4 | 14 | `barn` (east side) | Muffalo products with a bone beside Megaspider products without: Shogun gnaws the bone, Nelim crosses with meat | Shogun, facing the pile |
+| 5 | 19 | `fire-pit` | Nelim warms her hands at the hearth, cream shirt, lantern lit | AA_Aerofleet side-on, Shogun lying by the fire |
 
 **Nelim, scene by scene** (the fixture gives her dark brown eyes, trousers, two brows, a smirk and `blink`; `Nelim has her own face` after any change):
-- Hair: a dark ponytail for the work scenes (1 to 4), loose hair at the hearth (5). The colour is kept dark so that the rust and olive of the clothes read.
-- Clothes (`wears`, the first call undresses): 1 an olive duster over a rust shirt; 2 and 3 the rust shirt alone, sleeves for work, with an apron if one is loaded for the photograph; 5 a cream shirt, to pick up the firelight.
+- Hair: a dark ponytail all day (no hat, so no hat-hair mod). The colour is kept dark so that the rust and olive of the clothes read.
+- Clothes (`wears`, the first call undresses): 1 an olive duster over a rust shirt (cold dawn); 2 to 4 the rust shirt alone (the day warmed up, the duster is off); 5 a cream shirt for supper, to pick up the firelight.
 - Expression: only what is proven without Vanilla Experimentals for Facial Animation (`GALLERY.md` and the Sanctuary's `GALERIE.md`): the default smirk and `blink`. Eyes and mouth steps (`MouthSmile`, `LidCheerful`) are not used until a run shows them resolving.
 - Props to add to the pass map for the story (all to be read on a capture first, `GALLERY-PROPS.md`): Stick Lantern (`Mlie.StickLantern`, 2024351846), vanilla `TableButcher`, a plant pot for scene 5.
 
@@ -134,7 +134,7 @@ capture is accepted; a scene with no line has no subtitle.
 | 1 | `1-at-the-gate.jpg` | Dawn, and the giants are at the fence. |
 | 2 | `2-the-carcass.jpg` | The hunt is over; the work begins. |
 | 3 | `3-the-butcher-table.jpg` | Every cut comes away clean. |
-| 4 | `4-the-products.jpg` | Meat, fat and leather. Not one bone. |
+| 4 | `4-the-products.jpg` | One bone for the dog. Not one for the spider. |
 | 5 | `5-the-hearth.jpg` | Supper by the fire, and nothing left to pick out. |
 
 ## Dependencies and DLCs
