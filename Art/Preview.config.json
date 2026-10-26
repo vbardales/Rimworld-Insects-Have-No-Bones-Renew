@@ -1,39 +1,35 @@
 {
-  "layout": "classic",
-  "title": "Insects don't have bones Renew",
-  "titleSize": 46,
-  "titleParts": [
-    {
-      "text": "Insects don't"
-    },
-    {
-      "text": "have bones",
-      "breakBefore": true
-    },
-    {
-      "text": "Renew",
-      "scale": 0.65,
-      "font": "ui",
-      "color": "secondary"
-    }
-  ],
-  "suffix": "",
-  "tag": "",
-  "copyLines": [
-    "No insect bones.",
-    "For Medieval Overhaul",
-    "and Outland Core."
-  ],
-  "iconBadge": {
-    "file": "ModIcon-source.png",
-    "corner": "bottom-left",
-    "width": 240,
-    "translate": "-16.7%, 16.7%",
-    "rotate": 15,
-    "outline": false
+  "panel": {
+    "title": "Insects don't have bones Renew",
+    "titleSize": 46,
+    "titleParts": [
+      {
+        "text": "Insects don't"
+      },
+      {
+        "text": "have bones",
+        "breakBefore": true
+      },
+      {
+        "text": "Renew",
+        "scale": 0.65,
+        "font": "ui",
+        "color": "secondary"
+      }
+    ],
+    "copyLines": [
+      "No insect bones.",
+      "For Medieval Overhaul",
+      "and Outland Core."
+    ]
+  },
+  "icon": {
+    "file": "ModIcon-source.png"
+  },
+  "echo": {
+    "file": "echo-preview.png"
   },
   "backgroundFile": "Preview-source.png",
-  "backgroundSize": "cover",
   "palette": {
     "veil": "#202B35",
     "inkPrimary": "#F2ECE1",
