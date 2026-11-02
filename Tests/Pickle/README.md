@@ -97,7 +97,7 @@ Written on 2026-09-28, amended 2026-10-02. A line stays open until a run settles
 ## Checks that need no game
 
 ```powershell
-powershell.exe -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
+powershell.exe -ExecutionPolicy Bypass -File ../scripts/Check-Steps.ps1 -ModRoot .
 ```
 
 Every step line of every feature resolves to exactly one step, and every local pattern compiles (2026-09-28: 7

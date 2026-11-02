@@ -1,13 +1,14 @@
 param([Parameter(Mandatory=$true)][string]$Game,
       [Parameter(Mandatory=$true)][string]$Workshop)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'lib\Fixture.ps1')
 $mod = Join-Path $PSScriptRoot '..\Mod'
 $managed = Join-Path $Game 'RimWorldWin64_Data\Managed'
 [void][Reflection.Assembly]::LoadFrom((Join-Path $managed 'UnityEngine.CoreModule.dll'))
 $gameAssembly = [Reflection.Assembly]::LoadFrom((Join-Path $managed 'Assembly-CSharp.dll'))
 # Profiling reads live game preferences; disable it only in this test process.
 $gameAssembly.GetType('Verse.DeepProfiler', $true).GetField('enabled').SetValue($null, $false)
-$moAssembly = [Reflection.Assembly]::LoadFrom((Join-Path $Workshop '3219596926\1.6\Assemblies\MedievalOverhaul.dll'))
+$moAssembly = [Reflection.Assembly]::LoadFrom((Join-Path $Workshop "$($WorkshopId.MedievalOverhaul)\1.6\Assemblies\MedievalOverhaul.dll"))
 $extensionType = $moAssembly.GetType('MedievalOverhaul.ButcherProperties', $true)
 if ($extensionType.BaseType.FullName -ne 'Verse.DefModExtension') { throw 'Wrong extension base class' }
 foreach ($name in 'hasBone','hasFat') {
@@ -41,19 +42,7 @@ function Assert-Payloads($patchXml, $defs) {
 }
 $load = [xml](Get-Content (Join-Path $mod 'LoadFolders.xml') -Raw)
 foreach ($animals in 0..3) {
-    $roots = @((Join-Path $Game 'Data\Core\Defs'))
-    if ($animals -band 1) { $roots += Join-Path $Workshop '1541721856\1.6\Defs' }
-    if ($animals -band 2) { $roots += Join-Path $Workshop '1055485938\1.6\Defs' }
-    $baseline = [xml]'<Defs/>'
-    foreach ($root in $roots) {
-        if (!(Test-Path $root)) { throw "Missing fixture directory: $root" }
-        foreach ($file in Get-ChildItem $root -Recurse -Filter *.xml) {
-            $doc = [xml]::new(); $doc.Load($file.FullName)
-            foreach ($def in $doc.DocumentElement.ChildNodes) {
-                if ($def.NodeType -eq 'Element') { [void]$baseline.DocumentElement.AppendChild($baseline.ImportNode($def,$true)) }
-            }
-        }
-    }
+    $baseline = Get-MergedDefs $Game $Workshop $animals
     foreach ($integrations in 0..3) {
         $active = @()
         if ($integrations -band 1) { $active += 'DankPyon.Medieval.Overhaul' }

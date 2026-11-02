@@ -1,27 +1,12 @@
 param([Parameter(Mandatory=$true)][string]$Game,
       [Parameter(Mandatory=$true)][string]$Workshop)
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'lib\Fixture.ps1')
 $mod = Join-Path $PSScriptRoot '..\Mod'
 $patches = @(Get-ChildItem $mod -Recurse -Filter *.xml | Where-Object FullName -Match '\\Patches\\')
-foreach ($file in Get-ChildItem $mod -Recurse -Filter *.xml) {
-    $xml = [xml]::new(); $xml.Load($file.FullName)
-    foreach ($node in $xml.SelectNodes('//xpath')) { [void][System.Xml.XPath.XPathExpression]::Compile($node.InnerText) }
-}
-'PASS: 8 XML documents and 11 XPath expressions parse.'
+$checks = 0
 foreach ($combo in 0..3) {
-    $roots = @((Join-Path $Game 'Data\Core\Defs'))
-    if ($combo -band 1) { $roots += Join-Path $Workshop '1541721856\1.6\Defs' }
-    if ($combo -band 2) { $roots += Join-Path $Workshop '1055485938\1.6\Defs' }
-    $merged = [xml]'<Defs/>'
-    foreach ($root in $roots) {
-        if (!(Test-Path $root)) { throw "Missing real fixture directory: $root" }
-        foreach ($file in Get-ChildItem $root -Recurse -Filter *.xml) {
-            $doc = [xml]::new(); $doc.Load($file.FullName)
-            foreach ($def in $doc.DocumentElement.ChildNodes) {
-                if ($def.NodeType -eq 'Element') { [void]$merged.DocumentElement.AppendChild($merged.ImportNode($def, $true)) }
-            }
-        }
-    }
+    $merged = Get-MergedDefs $Game $Workshop $combo
     foreach ($file in $patches) {
         $doc = [xml]::new(); $doc.Load($file.FullName)
         $nodes = @($doc.SelectNodes('//xpath'))
@@ -35,7 +20,9 @@ foreach ($combo in 0..3) {
             if ($combo -band 1) { $expected = @(1,77) } else { $expected = @(0,0) }
         }
         if (($counts -join ',') -ne ($expected -join ',')) { throw "$($file.Name), combination $combo : actual $counts; expected $expected" }
+        $checks += $counts.Count
         "PASS: combination $combo, $($file.Name), matches $($counts -join ',')"
     }
 }
-'Scope: actual pre-inheritance XML selectors only; no RimWorld patch engine or butchering simulation.'
+"PASS: $($patches.Count) patch documents, $checks selector hit counts over 4 combinations."
+'Scope: actual pre-inheritance XML selectors only; no RimWorld patch engine or butchering simulation. XML parsing is Check-ModBasics.ps1.'

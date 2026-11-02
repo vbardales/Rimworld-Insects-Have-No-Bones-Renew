@@ -12,11 +12,11 @@ become Pickle scenarios, in how many passes, and what to keep afterwards.
 
 | Check | Command | What it proves | What it does not |
 | --- | --- | --- | --- |
-| `Tests/Audit-Xml.ps1` | `./Tests/Audit-Xml.ps1 -Game <RimWorld> -Workshop <workshop 294100>` | All 8 XML documents parse, the 11 XPath expressions compile, and every selector matches the intended number of nodes in the real 1.6 Def files of Core, Alpha Animals and Megafauna (24 checks, 4 combinations) | Patch application, inheritance, butchering |
+| `Tests/Audit-Xml.ps1` | `pwsh Tests/Audit-Xml.ps1 -Game <RimWorld> -Workshop <workshop 294100>` | Every selector matches the intended number of nodes in the real 1.6 Def files of Core, Alpha Animals and Megafauna (24 checks, 4 combinations) | Patch application, inheritance, butchering |
 | `Tests/Audit-PatchEngine.ps1` | same parameters | The patches deserialize through the game's own loader and apply through the game's own `PatchOperation.Apply` (16 combinations, 48 top-level calls): folder activation, payloads, no duplicate extension or stat, untouched control Defs | Complete Def loading, final inheritance, other mods' patches, butchering |
 | `scripts/Check-DefRefs.ps1`, `Check-XmlClasses.ps1`, `Check-XmlFields.ps1` | run from the monorepo, against this `Mod/` | No dangling reference, the five referenced classes resolve, every element maps to a 1.6 field | Runtime behaviour |
 
-Both scripts need the Medieval Overhaul and Outland Core assemblies and the two animal mods installed in
+Both scripts share the fixture merge and the Workshop ids of `Tests/lib/Fixture.ps1`; they are run by hand with `pwsh` (no CI). XML parsing is covered by `Check-ModBasics.ps1`. Both need the Medieval Overhaul and Outland Core assemblies and the two animal mods installed in
 the Workshop folder. Results are kept in `Tests/Audit-Xml-results.txt` and
 `Tests/Audit-PatchEngine-results.txt`. A result is only valid for the delivered patch files: the local
 manifest `Tests/Audit-artifacts.json` (ignored by git) holds their SHA-256, and a result older than a
@@ -60,7 +60,7 @@ translate or persist); a pass without a DLC (nothing here depends on one).
 
 Written on 2026-09-28 in `Tests/Pickle/`, played in part (2026-09-29 to 2026-10-01, see below): seven features, thirty-two scenarios, one local C# step
 assembly (six butcher steps and one log step) and five pass maps. Its `README.md` has the passes' filters, the
-expected counts and the list of what nobody has checked. `Tests/Pickle/Check-Steps.ps1` proves offline that every
+expected counts and the list of what nobody has checked. The shared `scripts/Check-Steps.ps1 -ModRoot .` (protocols root) proves offline that every
 step line resolves to exactly one step. The one real piece of work in it is the step that butchers a pawn and
 reads the products, since none existed. It asserts meat first, so a suppressed bone is never confused with an
 animal that yields nothing, and a muffalo and a cow as controls, so a missing bone is never confused with a bone
