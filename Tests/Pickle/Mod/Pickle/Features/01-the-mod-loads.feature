@@ -7,6 +7,7 @@
 # of the game instead. It is staged by every pass map.
 #
 # Not played in the pass "incompat-original", where the original mod logs an error on purpose (feature 07).
+@requires:nelim.pickletools.loadaudit
 Feature: the mod loads clean
 
   Scenario: the mod is loaded and nothing it owns was logged as a problem
