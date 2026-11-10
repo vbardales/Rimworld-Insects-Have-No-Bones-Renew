@@ -12,7 +12,7 @@ become Pickle scenarios, in how many passes, and what to keep afterwards.
 
 | Check | Command | What it proves | What it does not |
 | --- | --- | --- | --- |
-| `Tests/Audit-Xml.ps1` | `pwsh Tests/Audit-Xml.ps1 -Game <RimWorld> -Workshop <workshop 294100>` | Every selector matches the intended number of nodes in the real 1.6 Def files of Core, Alpha Animals and Megafauna (24 checks, 4 combinations) | Patch application, inheritance, butchering |
+| `Tests/Audit-Xml.ps1` | `pwsh Tests/Audit-Xml.ps1 -Game <RimWorld> -Workshop <workshop 294100>` | Every selector matches the intended number of nodes in the real 1.6 Def files of Core, Alpha Animals and Megafauna (44 selector hit counts, 4 combinations) | Patch application, inheritance, butchering |
 | `Tests/Audit-PatchEngine.ps1` | same parameters | The patches deserialize through the game's own loader and apply through the game's own `PatchOperation.Apply` (16 combinations, 48 top-level calls): folder activation, payloads, no duplicate extension or stat, untouched control Defs | Complete Def loading, final inheritance, other mods' patches, butchering |
 | `scripts/Check-DefRefs.ps1`, `Check-XmlClasses.ps1`, `Check-XmlFields.ps1` | run from the monorepo, against this `Mod/` | No dangling reference, the five referenced classes resolve, every element maps to a 1.6 field | Runtime behaviour |
 
