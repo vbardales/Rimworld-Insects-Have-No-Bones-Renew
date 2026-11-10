@@ -17,11 +17,11 @@
 # SCENES (index, place, hour; subject; composition; living things; decor; what the picture says; subtitle). Estimate: 5, minus 0.5 per weak criterion.
 # 1 workshop-1-dawn. enclosure-south, 06:00, Clear, +30 ticks. Nelim walks toward the gate; at the fence an Arthropleura facing the camera (the one
 #   front-facing animal of the series) and a Megascarab side-on pressing the fence. Root size 6, Nelim in the left third and the foreground, Arthropleura
-#   centre-back, low light. Decor: DR_StickLantern lit on the gatepost (removed after). Says: the giants came in the night. Moment: just after they
+#   centre-back, low light. Decor, place kept as is (fence, gates, crop zone stay): DR_StickLantern lit (157, 209) by the gate, a PlantPot (154, 211), a Plant_Daylily fully grown (161, 211), a Stool (153, 208) (removed after). Says: the giants came in the night. Moment: just after they
 #   appear, just before she opens the gate. Gesture: `"Nelim" is forced to walk to (x, z)` then `I advance the paused game by exactly N ticks` (played, ticket 531b). Estimate 4.5
 #   (j weak: the creatures, not yet the mod).
 # 2 workshop-2-the-carcass. gravel-yard, 09:00, Clear, +25 ticks. Nelim (no duster: it warmed up) walks up to a dead Megaspider; Shogun, facing the
-#   carcass (East), head toward it, waits for her to arrive. Root size 6, carcass lower right, Nelim centre-left, long morning shadows. Decor (the hunt):
+#   carcass (East), head toward it, waits for her to arrive. Root size 6, carcass lower right, Nelim centre-left, long morning shadows. Decor (the hunt), place kept as is (furniture and lamps stay): a DR_StickLantern (173, 146), a PlantPot (164, 142), a Plant_Daylily fully grown (172, 140),
 #   a Bow_Short on the gravel near Nelim's path, a Stool by the carcass. Says: the hunt is over, the work begins. Moment: the kill is just behind her, the
 #   knife is next. Gesture: `"Nelim" is forced to walk to` + paused advance of 25 ticks (played); Shogun stands facing the carcass. 4.5 (j weak).
 # 3 workshop-3-the-butcher-table. barn, 11:00. Nelim at the TableButcher (194, 237) with the knife, the carcass beside it, the products (meat, fat, leather)
@@ -54,10 +54,12 @@ Feature: Workshop gallery
 
   Scenario: 1 dawn, the giants are at the fence
     Given I set the hour to 6
-    And Nelim's Sanctuary: the sanctuary "enclosure-south" is emptied
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
-    And Nelim's Pickle Tools: I place the decor "DR_StickLantern" at (151, 216)
-    And Nelim's Pickle Tools: the decor "DR_StickLantern" at (151, 216) is lit
+    And Nelim's Pickle Tools: I place the decor "DR_StickLantern" at (157, 209)
+    And Nelim's Pickle Tools: the decor "DR_StickLantern" at (157, 209) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (154, 211)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (161, 211) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (153, 208)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
@@ -66,23 +68,25 @@ Feature: Workshop gallery
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And Nelim's Pickle Tools: I let 10 ticks pass
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: an adult animal of kind "Arthropleura" named "Rhea" is spawned at (156, 214)
-    And Nelim's Pickle Tools: an adult animal of kind "Megascarab" named "Scara" is spawned at (159, 212)
-    And Nelim's Pickle Tools: the animal "Rhea" stands at (156, 214) facing South
-    And Nelim's Pickle Tools: the animal "Scara" stands at (159, 212) facing East
-    And Nelim's Pickle Tools: "Nelim" stands at (147, 214) facing East
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (151, 214)
-    When Nelim's Pickle Tools: I frame the area centred on (154, 214) at root size 6
+    And Nelim's Pickle Tools: an adult animal of kind "Arthropleura" named "Rhea" is spawned at (160, 210)
+    And Nelim's Pickle Tools: an adult animal of kind "Megascarab" named "Scara" is spawned at (163, 209)
+    And Nelim's Pickle Tools: the animal "Rhea" stands at (160, 210) facing South
+    And Nelim's Pickle Tools: the animal "Scara" stands at (163, 209) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (150, 210) facing East
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (154, 210)
+    When Nelim's Pickle Tools: I frame the area centred on (157, 210) at root size 6
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
     Then I take a screenshot "gallery-1-at-the-gate"
 
   Scenario: 2 morning, the hunt is over
     Given I set the hour to 9
-    And Nelim's Sanctuary: the sanctuary "gravel-yard" is emptied
     And Nelim's Sanctuary: the animals are removed from the sanctuary "gravel-yard"
     And Nelim's Pickle Tools: I place the decor "Stool" at (166, 141)
     And Nelim's Pickle Tools: I place the decor "Bow_Short" at (165, 146)
+    And Nelim's Pickle Tools: I place the decor "DR_StickLantern" at (173, 146)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (164, 142)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (172, 140) fully grown
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
