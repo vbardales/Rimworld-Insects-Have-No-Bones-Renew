@@ -37,7 +37,7 @@
 #   products, and the scene is redone if there is no bone item. 4.5 (j weak until the bone is seen).
 # 5 workshop-5-the-hearth. fire-pit, 19:00. Nelim (cream shirt, ponytail) at the hearth, warming her hands; Shogun lies by the fire; an Alpha Animals
 #   AA_Aerofleet rests side-on near the wall; the hall's thrumbos are sent away (one subject: the supper). Root size 6, fire centre, Nelim right,
-#   Shogun foreground. Decor: DR_StickLantern lit (183, 113), a PlantPot with Plant_Daylily. Says: supper by the fire, nothing left to pick out. Gesture:
+#   Shogun foreground. Decor: DR_StickLantern lit (183, 113), the sanctuary PlantPot (184, 116), no plant step can sow a pot. Says: supper by the fire, nothing left to pick out. Gesture:
 #   a still pose (a hearth job is asked of NPT). 4.0 (e, j weak).
 #
 # Mods: the "gallery" map (wsl-deps.gallery.map): Sanctuary, bodies and faces, Medieval Overhaul (the fat and the bone contrast), Alpha Animals,
@@ -58,7 +58,7 @@ Feature: Workshop gallery
     And Nelim's Sanctuary: the animals are removed from the sanctuary "enclosure-south"
     And Nelim's Pickle Tools: I place the decor "DR_StickLantern" at (151, 216)
     And Nelim's Pickle Tools: the decor "DR_StickLantern" at (151, 216) is lit
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 64, 60)
@@ -83,7 +83,7 @@ Feature: Workshop gallery
     And Nelim's Sanctuary: the animals are removed from the sanctuary "gravel-yard"
     And Nelim's Pickle Tools: I place the decor "Stool" at (166, 141)
     And Nelim's Pickle Tools: I place the decor "Bow_Short" at (165, 146)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 64, 60)
@@ -104,7 +104,7 @@ Feature: Workshop gallery
     And Nelim's Pickle Tools: the area from (190, 232) to (198, 242) is emptied
     And Nelim's Pickle Tools: the animals are removed from the area from (190, 232) to (198, 242)
     And Nelim's Pickle Tools: I place the decor "TableButcher" at (194, 237)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 64, 60)
@@ -126,7 +126,7 @@ Feature: Workshop gallery
     Given I set the hour to 14
     And Nelim's Pickle Tools: the area from (198, 232) to (204, 242) is emptied
     And Nelim's Pickle Tools: the animals are removed from the area from (198, 232) to (204, 242)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (168, 84, 48)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 64, 60)
@@ -153,8 +153,7 @@ Feature: Workshop gallery
     And Nelim's Sanctuary: the animals are removed from the sanctuary "fire-pit"
     And Nelim's Pickle Tools: I place the decor "DR_StickLantern" at (183, 113)
     And Nelim's Pickle Tools: the decor "DR_StickLantern" at (183, 113) is lit
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (184, 116) fully grown
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytail"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: "Nelim" hair colour is rgb (60, 40, 30)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (232, 224, 200)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (70, 64, 60)
